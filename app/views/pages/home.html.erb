@@ -1,0 +1,17 @@
+<h1>This is the Home page.</h1>
+<div class="d-flex gap-3 my-3">
+  <%= button_to "New Employee", employees_new_path, :method => :get, class: "btn btn-primary bg-gray-200 text-gray-800" %>
+  <%= button_to "Departments", '/departments', :method => :get, class: "btn btn-secondary bg-gray-200 text-gray-800" %>
+</div>
+<% @employees.each do |emp|%>
+  <p>
+    <%= "[#{emp.id}]" %> 
+    <%= link_to "#{emp.name}", "/employees/#{emp.id}" %> 
+    <%="#{emp.age == '' ? 'NA' : emp.age}"%> 
+    <%="#{emp.department_id == nil ? 
+      '' 
+      : 
+      (emp.department.name)
+    }"%> 
+  </p>
+<% end %>

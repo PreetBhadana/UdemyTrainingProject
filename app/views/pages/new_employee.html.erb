@@ -1,0 +1,12 @@
+<h1>Create new employee</h1>
+
+<%= simple_form_for(@employee) do |f| %>
+  <%= f.input :name %>
+  <%= f.label :image%>
+  <%= f.file_field :image%>
+  <%= f.label :pictures%>
+  <%= f.file_field :pictures, multiple: true%>
+  <%= f.input :age %>
+  <%= f.input :department_id%>
+  <%= f.submit %>
+<% end %>

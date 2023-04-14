@@ -1,0 +1,24 @@
+<nav class="flex items-center justify-between flex-wrap bg-gray-100 p-6 px-3">
+  <div class="container-fluid flex items-center">
+    <%= link_to "Preet's App", root_path, class: '"font-semibold text-xl tracking-tight"'%>
+    <div class="block lg:hidden">
+      <button class="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
+      </button>
+    </div>
+    <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto" id="navbarSupportedContent">
+      <ul class="flex text-sm lg:flex-grow items-center ml-5">
+        <li class="mr-3 items-center">
+          <%= link_to "Home", root_path, class: 'block lg:inline-block lg:mt-0 text-gray-700 hover:text-black cursor-pointer'%>
+        </li>
+        <li class="mr-3 items-center">
+          <%= link_to "About", '/about', class: 'block lg:inline-block lg:mt-0 text-gray-700 hover:text-black cursor-pointer'%>
+        </li>
+        
+      </ul>
+      <ul class="navbar-nav">
+        <%= render "user/session_manager"%>
+      </ul>
+    </div>
+  </div>
+</nav>

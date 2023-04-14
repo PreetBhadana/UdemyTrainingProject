@@ -1,0 +1,6 @@
+<h1>Department detail page</h1>
+<%= image_tag(@department.image) %>
+<p><%= "[#{@department.id}]"%></p>
+<p><%= "#{@department.name}"%></p>
+<%= link_to "Edit", "/department_edit/#{@department.id}"%>
+<%= button_to "Destroy", action= "/department_destroy/#{@department.id}", :method => :delete %>

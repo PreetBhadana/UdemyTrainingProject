@@ -1,0 +1,6 @@
+<h1>Edit department page</h1>
+<%= form_with url: "/department_update/#{@department.id}", method: :patch, model: @department do |f|%>
+  <%= "Name: "%>
+  <%= f.text_field :name%>
+  <%= f.submit%>
+<% end %>

@@ -1,0 +1,8 @@
+<h1>Departments page</h1>
+<%= link_to 'New depatment', '/department/new'%>
+<% @departments.each do |dept|%>
+  <p>
+    <%="[#{dept.id}]"%>
+    <%= link_to "#{dept.name}", "/departments/#{dept.id}"%>
+  </p>
+<% end %>

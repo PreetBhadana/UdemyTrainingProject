@@ -1,0 +1,8 @@
+<h1>Projects page </h1>
+<%= link_to "Create Project", "/projects/new"%>
+<% @projects.each do |proj|%>
+  <p>
+    <%= "[#{proj.id}]"%>
+    <%= link_to "#{proj.name}", "/projects/#{proj.id}"%>
+  </p>
+<%end%>

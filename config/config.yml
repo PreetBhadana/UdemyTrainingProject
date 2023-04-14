@@ -1,0 +1,9 @@
+default: &default
+  MAIL_USERNAME: 'preet.bhadana@berylsystems.com'
+  MAIL_DOMAIN: 'http://localhost:3000/'
+  MAIL_PASSWORD: 'Pn@8700572883'
+
+development:
+  <<: *default
+  time_interval: 300000
+  root_url: 'http://localhost:3000/'

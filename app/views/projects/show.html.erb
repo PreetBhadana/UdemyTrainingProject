@@ -1,0 +1,6 @@
+<h1>Project detail page</h1>
+<p><%= "#{@project.id}"%></p>
+<p><%= "#{@project.name}"%></p>
+<%= link_to "Edit project", "/projects/#{@project.id}/edit"%>
+<p></p>
+<%= button_to "Delete", action= "/projects/#{@project.id}", :method => :delete %>

@@ -1,0 +1,11 @@
+<h1>Edit employee</h1>
+
+<%= form_with url: "/employee_update/#{@employee.id}", method: :patch, model: @employee  do |f| %>
+  <%= "Name: "%>
+  <%= f.text_field :name %>
+  <%= "Age: "%>
+  <%= f.number_field :age %>
+  <%= "Department Id*: "%>
+  <%= f.number_field :department_id%>
+  <%= f.submit %>
+<% end %>

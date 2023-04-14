@@ -1,0 +1,7 @@
+<h1>Employee detail page.</h1>
+<p><%= "Id: #{@employee.id}" %></p>
+<p><%= "Name: #{@employee.name}" %></p>
+<p><%= "Age: #{@employee.age}" %></p>
+<p><%= "Department: #{@employee.department_id != nil ? @department.name : 'NA'}" %></p>
+<%= link_to "Edit", "/employee_edit/#{@employee.id}"%>
+<%= button_to "Destroy", action= "/employee_destroy/#{@employee.id}", :method => :delete %>
