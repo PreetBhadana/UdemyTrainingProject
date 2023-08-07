@@ -12,6 +12,7 @@ class Api::V1::UserController < ApplicationController
       render json: { error: "Invalid id"}, status: 201
     else
       # render json: { user: @user }, status: 200
+      
       render json: { user: UserSerializer.new(@user, root: false) }, status: 200
       
     end
